@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>ClearTrip Test Application</title>
+<script src="./jquery-2.1.4.min.js"></script>
+<script src="./jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="./angular.min.js"></script>
+<script src="./fullStackApp.js"></script>
+<script src="./childrenController.js"></script>
+<body>
+    <form ng-app="fullStackApp" ng-controller='childrenController' ng-submit="send()">
+      <input type="text" ng-model="firstDate" datepicker/>
+     <h3> First date: {{firstDate}}</h3>
+ 
+        <input type="text" name="date" ng-model="secondDate" datepicker/>
+            
+		<button ng-click="calculate(firstDate,secondDate)">calculate</button>
+    
+    <h3> Second date: {{secondDate}}</h3>
+         
+         
+         <h2>Total Children: {{childrenCount}} </h2>
+		 
+        <div><pre>{{result}}</pre>
+        </div>
+     </form>   
+ 
+    
+</body>
+</html>
